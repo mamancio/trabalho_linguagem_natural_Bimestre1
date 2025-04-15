@@ -1,0 +1,68 @@
+version: "3.1"
+
+intents:
+  - perguntar_horario
+  - perguntar_endereco
+  - perguntar_contato
+  - status_funcionamento
+  - informar_endereco
+  - informar_contato
+  - informar_horario
+  - verificar_funcionamento
+  - verificar_contato
+  - verificar_endereco
+  - verificar_horario
+
+
+responses:
+  utter_informar_endereco:
+    - text: "Estamos na Rua: Irênio Greco, 4580..."
+
+  utter_informar_contato:
+    - text: "Você pode entrar em contato pelo telefone..."
+
+  utter_informar_horario:
+    - text: "Funcionamos de segunda a sexta, das 8h às 18h."
+  
+  utter_funcionamento:
+    - text: "Nosso horário de funcionamento é de segunda a sexta, das 8h às 18h."
+
+slots:
+  funcionamento:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: funcionamento
+  contato:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: contato
+  endereco:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: endereco
+  horario:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: horario
+
+entities:
+  - funcionamento
+  - contato
+  - endereco
+  - horario
+
+actions:
+  - action_verificar_funcionamento
+  - utter_informar_funcionamento
+  - utter_funcionamento
+  - Utter_informar_contato
+  - utter_contato
+  - utter_informar_endereco
+  - utter_endereco
+  - utter_informar_horario
+  - utter_horario
+

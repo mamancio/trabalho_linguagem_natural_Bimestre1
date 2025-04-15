@@ -1,0 +1,16 @@
+version: "3.1"
+
+stories:
+
+- story: fluxo_pergunta_endereço
+  steps:
+  - intent: saudacao
+  - action: utter_saudacao
+  - intent: perguntar_endereco
+  - action: utter_informar_endereco
+  - intent: perguntar_horario
+  - action: utter_informar_horario
+  - intent: perguntar_empresa
+  - action: utter_informar_empresa
+  - intent: perguntar_contato
+  - action: utter_informar_contato

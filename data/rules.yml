@@ -1,0 +1,23 @@
+version: "3.1"
+
+rules:
+
+- rule: Responder horário
+  steps:
+    - intent: perguntar_horario
+    - action: utter_informar_horario
+
+- rule: Responder endereço
+  steps:
+    - intent: perguntar_endereco
+    - action: utter_informar_endereco
+
+- rule: Responder contato
+  steps:
+    - intent: perguntar_contato
+    - action: utter_informar_contato
+
+- rule: Verificar funcionamento
+  steps:
+    - intent: status_funcionamento
+    - action: action_verificar_funcionamento

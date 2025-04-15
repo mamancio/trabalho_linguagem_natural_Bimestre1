@@ -1,0 +1,28 @@
+version: "3.1"
+
+nlu:
+- intent: perguntar_horario
+  examples: |
+    - Qual o horário de funcionamento?
+    - Que horas vocês abrem?
+    - Que horas fecha?
+    - Me diga o horário de atendimento
+
+- intent: perguntar_endereco
+  examples: |
+    - Onde vocês estão?
+    - Qual o endereço?
+    - Me passa a localização
+    - Onde fica a empresa?
+
+- intent: perguntar_contato
+  examples: |
+    - Qual o número de telefone?
+    - Me dá o WhatsApp de vocês
+    - Como entro em contato?
+
+entities:
+- funcionamento
+- contato
+- endereco
+- horario
